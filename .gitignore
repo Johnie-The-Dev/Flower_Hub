@@ -1,0 +1,6 @@
+__pycache__/
+Flowerhub_venv/
+*.pyc
+*.pyo
+*.pyd
+.env

@@ -1,0 +1,808 @@
+<WindowManager>:
+    WelcomeScreen:
+        name: 'Welcome'
+    VendorMainScreen:
+        name: 'Main'
+    CustomerMainScreen:
+        name: 'Main2'
+    ViewInventory:
+        name:'Inventory'
+    CarriageInwards:
+        name: 'Inwards'
+    CarriageOutwards:
+        name: 'Outwards'
+    Reject:
+        name: 'Spoilt'
+    Transactions:
+        name: 'Transact'
+    ViewTransaction:
+        name: 'viewtransaction'
+    MakeOrder:
+        name: 'Order'
+    About:
+        name: 'Info'
+   
+
+
+
+
+                        
+<WelcomeScreen>:
+    name: 'Welcome'
+    
+    FloatLayout:
+        canvas:
+            Color: 
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing:2
+            padding:2
+
+           
+                
+            GridLayout: 
+                cols:1
+                size_hint_x: .4
+                size_hint_y: .5
+                pos: self.pos
+                spacing: 2
+                padding: 2
+
+                canvas:
+                    Color:
+                        rgb: 0,0,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            
+                Label:
+                    text: "WELCOME TO RUACH FLOWERHUB"
+                    font_size: 35
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+                
+                
+                Button:
+                    text: 'Vendor'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Login1'
+                        root.manager.transition.direction = 'right'
+                
+                Button:
+                    text: 'Customer'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Login2'
+                        root.manager.transition.direction = 'right'
+ 
+<VendorMainScreen>:
+    name: 'Main'
+    
+    FloatLayout:
+        canvas:
+            Color: 
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+
+        Image:
+            source: 'Images/wallpaper.jpg'
+            allow_stretch: True
+            keep_ratio: False
+            size: self.size
+            pos: self.pos
+
+        
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing:2
+            padding:2
+
+           
+                
+            GridLayout: 
+                cols:1
+                size_hint_x: .4
+                size_hint_y: .5
+                pos: self.pos
+                spacing: 2
+                padding: 2
+
+                canvas:
+                    Color:
+                        rgb: 0,0,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            
+                Label:
+                    text: "MAIN MENU"
+                    font_size: 35
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+                
+                
+                Button:
+                    text: 'View Inventory'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Inventory'
+                        root.manager.transition.direction = 'right'
+                
+                Button:
+                    text: 'Carriage Inwards'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Inwards'
+                        root.manager.transition.direction = 'right'
+                Button:
+                    text: 'Carriage Outwards'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Outwards'
+                        root.manager.transition.direction = 'right'
+                Button:
+                    text: 'Reject or Spoilt'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Spoilt'
+                        root.manager.transition.direction = 'right'
+                Button:
+                    text: 'Transactions'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Transact'
+                        root.manager.transition.direction = 'right'
+                Button:
+                    text: 'View Transactions'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Transactions'
+                        root.manager.transition.direction = 'right' 
+<CustomerMainScreen>:
+    name: 'Main2'
+    
+    FloatLayout:
+        canvas:
+            Color: 
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing:2
+            padding:2
+
+           
+                
+            GridLayout: 
+                cols:1
+                size_hint_x: .4
+                size_hint_y: .5
+                pos: self.pos
+                spacing: 2
+                padding: 2
+
+                canvas:
+                    Color:
+                        rgb: 0,0,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            
+                Label:
+                    text: "MAIN MENU"
+                    font_size: 35
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+                
+                
+                
+                Button:
+                    text: 'About RUACH FLOWERHUB'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Info'
+                        root.manager.transition.direction = 'right'
+                Button:
+                    text: 'Make Order'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Order'
+                        root.manager.transition.direction = 'right'
+
+
+<CarriageInwards>:
+    name: 'Inwards'
+    
+    FloatLayout:
+        canvas:
+            Color: 
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing:2
+            padding:2
+
+           
+                
+            GridLayout: 
+                cols:1
+                size_hint_x: .4
+                size_hint_y: .5
+                pos: self.pos
+                spacing: 2
+                padding: 2
+
+                canvas:
+                    Color:
+                        rgb: 0,0,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            
+                Label:
+                    text: 'Carriage Inwards'
+                    font_size: 35
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+                
+            
+                TextInput:
+                    id: add_flower_name
+                    multiline: False
+                    hint_text: 'Flower Name'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: add_flower_quantity
+                    multiline: False
+                    hint_text: 'Quantity'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: add_flower_price
+                    multiline: False
+                    hint_text: 'Price'
+                    size_hint_y: None
+                    height: 30
+                Button:
+                    text: 'Enter Record'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press: root.add_flower()
+                
+                Button:
+                    text: '<<Back'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Main'
+                        root.manager.transition.direction = 'left'
+
+<CarriageOutwards>:
+    name: 'Outwards'
+    FloatLayout:
+        canvas:
+            Color: 
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing:2
+            padding:2
+            GridLayout: 
+                cols:1
+                size_hint_x: .4
+                size_hint_y: .5
+                pos: self.pos
+                spacing: 2
+                padding: 2
+
+                canvas:
+                    Color:
+                        rgb: 0,0,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+                Label:
+                    text: 'Carriage Outwards'
+                    font_size: 35
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+
+                TextInput:
+                    id: sold_flower_id
+                    multiline: False
+                    hint_text: 'Flower ID'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: sold_flower_quantity
+                    multiline: False
+                    hint_text: 'Quantity Sold'
+                    size_hint_y: None
+                    height: 30
+
+                Button:
+                    text: 'Enter Record'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press: root.delete_sold_flower()
+
+                Button:
+                    text: '<<Back'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Main'
+                        root.manager.transition.direction = 'left'
+<Reject>:
+    name: 'Spoilt'
+    FloatLayout:
+        canvas:
+            Color: 
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing:2
+            padding:2
+            GridLayout: 
+                cols:1
+                size_hint_x: .4
+                size_hint_y: .6
+                pos: self.pos
+                spacing: 2
+                padding: 2
+
+                canvas:
+                    Color:
+                        rgb: 0,0,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+                Label:
+                    text: 'Reject or Spoilt'
+                    font_size: 35
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+
+                TextInput:
+                    id: spoilt_flower_id
+                    multiline: False
+                    hint_text: 'Flower ID'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: spoilt_flower_quantity
+                    multiline: False
+                    hint_text: 'Quantity Spoilt'
+                    size_hint_y: None
+                    height: 30
+
+                Button:
+                    text: 'Enter Record'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press: root.delete_spoilt_flower()
+
+                Button:
+                    text: '<<Back'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Main'
+                        root.manager.transition.direction = 'left'
+
+
+<Transactions>:
+    name: 'Transact'
+    FloatLayout:
+        canvas:
+            Color: 
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing:2
+            padding:2
+            GridLayout: 
+                cols:1
+                size_hint_x: .4
+                size_hint_y: .5
+                pos: self.pos
+                spacing: 2
+                padding: 2
+
+                canvas:
+                    Color:
+                        rgb: 0,0,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+                Label:
+                    text: 'Make A Transaction'
+                    font_size: 35
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+
+                TextInput:
+                    id: custname
+                    multiline: False
+                    hint_text: 'Customer Name'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: custid
+                    multiline: False
+                    hint_text: 'Customer ID'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: county
+                    multiline: False
+                    hint_text: 'County'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: town
+                    multiline: False
+                    hint_text: 'Town'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: ftype
+                    multiline: False
+                    hint_text: 'Item Sold'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: nflowers
+                    multiline: False
+                    hint_text: 'Amount of Items Sold'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: price
+                    multiline: False  
+                    hint_text: 'Total Price'
+                    size_hint_y: None
+                    height: 30
+
+                Button:
+                    text: 'Record Transaction'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press: root.add_transaction()
+
+                Button:
+                    text: '<<Back'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Main'
+                        root.manager.transition.direction = 'left'
+<ViewTransaction>:
+    name: 'viewtransaction'
+    FloatLayout:
+        canvas:
+            Color:
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing: 2
+            padding: 2
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: .7, .7
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                spacing: 10
+                padding: 10
+
+                Label:
+                    id: available_transactions_label
+                    text: "Available Transactions:"
+                    font_size: 16
+                    halign: 'left'
+                    valign: 'top'
+                    text_size: self.size
+
+                Button:
+                    text: 'Refresh'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 40
+                    on_press: root.display_available_transaction()
+
+                Button:
+                    text: '<<Back'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 40
+                    on_press:
+                        root.manager.current = 'Main'
+                        root.manager.transition.direction = 'left'                
+<ViewInventory>:
+    name: 'Inventory'
+    FloatLayout:
+        canvas:
+            Color: 
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing: 2
+            padding: 2
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: .6, .7
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                spacing: 10
+                padding: 10
+
+                Label:
+                    id: available_flowers_label
+                    text: "Available Flowers:"
+                    font_size: 18
+                    halign: 'left'
+                    valign: 'top'
+                    text_size: self.size
+
+                Label:
+                    id: total_flowers_label
+                    text: "Total Flowers:"
+                    font_size: 18
+                    halign: 'left'
+                    valign: 'top'
+                    text_size: self.size
+
+                Button:
+                    text: 'Refresh'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 40
+                    on_press: root.display_available_flowers()
+
+                Button:
+                    text: 'Show Total'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 40
+                    on_press: root.display_total_flowers()
+
+                Button:
+                    text: '<<Back'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 40
+                    on_press:
+                        root.manager.current = 'Main'
+                        root.manager.transition.direction = 'left'
+<MakeOrder>:
+    name: 'Order'
+    FloatLayout:
+        canvas:
+            Color: 
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing:2
+            padding:2
+            GridLayout: 
+                cols:1
+                size_hint_x: .4
+                size_hint_y: .7
+                pos: self.pos
+                spacing: 2
+                padding: 2
+
+                canvas:
+                    Color:
+                        rgb: 0,0,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+                Label:
+                    text: 'Make An Order'
+                    font_size: 35
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+
+                TextInput:
+                    id: fname
+                    multiline: False
+                    hint_text: 'First name'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: sname
+                    multiline: False
+                    hint_text: 'Surname'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: email
+                    multiline: False
+                    hint_text: 'Your Email'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: creside
+                    multiline: False
+                    hint_text: 'Resident County'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: treside
+                    multiline: False
+                    hint_text: 'Resident Town'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: ftype
+                    multiline: False
+                    hint_text: 'Item type'
+                    size_hint_y: None
+                    height: 30
+
+                TextInput:
+                    id: nflowers
+                    multiline: False  
+                    hint_text: 'No. of Items'
+                    size_hint_y: None
+                    height: 30
+
+                Button:
+                    text: 'Make Order'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press: root.makingorder()
+
+                Button:
+                    text: '<<Back'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Main2'
+                        root.manager.transition.direction = 'left'
+<About>:
+    name: 'Info'
+    
+    FloatLayout:
+        canvas:
+            Color: 
+                rgba: 0,1,0,.5
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            spacing:2
+            padding:2
+
+           
+                
+            GridLayout: 
+                cols:1
+                size_hint_x: .4
+                size_hint_y: .5
+                pos: self.pos
+                spacing: 2
+                padding: 2
+
+                canvas:
+                    Color:
+                        rgb: 0,0,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            
+                Label:
+                    text: '''RUACH FLOWERHUB is a company that deals with decorative flowers for different events and occassions. We sell: Roses, Deskflowers, Wallflowers, Floorflowers, Floatingflowers, Graduationflowers,Weddingflowers and Vases. After making an order we deliver to you to within days or as per your communication. '''
+                    font_size: 20
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+                
+                
+                Button:
+                    text: '<<Back'
+                    color: 0,1,0
+                    size_hint_y: None
+                    height: 30
+                    on_press:
+                        root.manager.current = 'Main2'
+                        root.manager.transition.direction = 'left'
